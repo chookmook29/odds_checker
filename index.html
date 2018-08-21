@@ -1,0 +1,385 @@
+
+ <!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <style>
+            #main {
+                
+                        }
+                #forms {
+                    font-size: 14px;
+                }
+                #checkboxes {
+                    font-size: 14px;
+                }
+                #summary {
+                    font-weight: bold;
+					font-size: 16px;
+                }
+				//.col-lg-4 {
+				border:1px solid black;
+				}
+			//#select_smoke {
+			display: none;
+			}
+			//#select_blast {
+			display: none;
+			}
+            </style>
+        <title> </title>
+
+    </head>
+    <body>
+	<br>
+    <div class="row"> 
+	<div class="col-lg-offset-5 col-lg-5 col-sm-offset-5 col-sm-5"></div>
+	<div class="col-lg-2 col-sm-2">
+    <h3 class=".h3">ODDS CHECKER</h3>
+	</div>
+	</div>
+	<br>
+	<br>
+	
+	<div class="row">
+	<div class="col-lg-offset-3 col-lg-3 col-sm-offset-3 col-sm-3"></div>
+
+    <div class="col-lg-3 col-sm-3">            
+       <div id="forms">         
+      <label for="select">TEAM #1</label>
+      <select id="select_team_1">
+        <option value="0 0">Choose...</option>
+        <optgroup label="Serie A">
+          <option value="1593 Juventus ITA">Juventus Torino</option>
+          <option value="1531 Napoli ITA">SSC Napoli</option>
+          <option value="1591 Inter ITA">Inter Milan</option>
+          <option value="1599 Atalanta ITA">Atalanta Bergamo</option>
+          <option value="1597 Roma ITA">AS Roma</option>
+          <option value="1566 Lazio ITA">Lazio Roma</option>
+          <option value="1590 Milan ITA">AC Milan</option>
+          <option value="1588 Fiorentina ITA">AC Fiorentina</option>
+          <option value="1595 Torino ITA">Torino AC</option>
+          <option value="1110 Sampdoria ITA">Sampdoria Genoa</option>
+          <option value="1592 Udinese ITA">Udinese Calcio</option>
+          <option value="2924 SPAL ITA">Spal Ferrara 1907</option>
+          <option value="1527 Genoa ITA">Genoa FC</option>
+          <option value="1602 Cagliari ITA">Cagliari Calcio</option>
+          <option value="2462 Sassuolo ITA">US Sassuolo Calcio</option>
+		  <option value="1586 Parma ITA">FC Parma</option>
+          <option value="1538 Chievo ITA">Chievo Verona</option>
+          <option value="1589 Empoli ITA">Empoli FC</option>
+          <option value="1540 Frosinone ITA">Frosinone Calcio</option>
+          <option value="1525 Bologna ITA">Bologna FC</option>
+        </optgroup>
+		<optgroup label="Premier League">
+          <option value="220 Manchester+City ENG">Manchester City</option>
+          <option value="204 Liverpool ENG">Liverpool FC</option>
+          <option value="218 Tottenham+Hotspur ENG">Tottenham Hotspur</option>
+          <option value="207 Chelsea ENG">Chelsea FC</option>
+          <option value="213 Manchester+United ENG">Manchester United</option>
+          <option value="201 Arsenal ENG">Arsenal FC</option>
+          <option value="211 Everton ENG">Everton FC</option>
+          <option value="235 Leicester+City ENG">Leicester City</option>
+          <option value="206 Newcastle+United  ENG">Newcastle United</option>
+          <option value="241 Southampton ENG">Southampton FC</option>
+          <option value="242 Crystal+Palace ENG">Crystal Palace</option>
+          <option value="244 Watford ENG">Watford FC</option>
+          <option value="225 Burnley ENG">Burnley FC</option>
+          <option value="839 Brighton+%26+Hove+Albion ENG">Brighton & Hove Albion</option>
+          <option value="243 Wolverhampton+Wanderers ENG">Wolverhampton Wanderers</option>
+		  <option value="202 Fulham ENG">Fulham FC</option>
+          <option value="219 West+Ham+United ENG">West Ham United</option>
+          <option value="849 Bournemouth ENG">AFC Bournemouth</option>
+          <option value="227 Cardiff+City ENG">Cardiff City</option>
+          <option value="842 Huddersfield+Town ENG">Huddersfield Town</option>
+        </optgroup>
+		<optgroup label="La Liga">
+          <option value="1064 Barcelona SPA">FC Barcelona</option>
+          <option value="1067 Real+Madrid SPA">Real Madrid</option>
+          <option value="1068 Atletico+Madrid SPA">Atletico Madrid</option>
+          <option value="1061 Sevilla SPA">Sevilla FC</option>
+          <option value="1049 Real+Sociedad SPA">Real Sociedad</option>
+          <option value="1073 Valencia SPA">FC Valencia</option>
+          <option value="1074 Villarreal SPA">Villarreal CF</option>
+          <option value="1072 Betis SPA">Betis Sevilla</option>
+          <option value="1055 Athletic+Bilbao SPA">Athletic Bilbao</option>
+          <option value="1039 Celta+de+Vigo SPA">Celta de Vigo</option>
+          <option value="1059 Espanyol SPA">Espanyol Barcelona</option>
+          <option value="1062 Getafe SPA">Getafe CF</option>
+          <option value="1048 Eibar SPA">SD Eibar</option>
+          <option value="2337 Girona SPA">Girona FC</option>
+          <option value="2298 Leganes SPA">CD Leganes</option>
+		  <option value="1066 Levante SPA">UD Levante Valencia</option>
+          <option value="2111 Alaves SPA">CD Alaves</option>
+          <option value="1060 Valladolid SPA">Real Valladolid</option>
+          <option value="2303 Rayo+Vallecano SPA">Rayo Vallecano</option>
+          <option value="2319 Huesca SPA">SD Huesca</option>
+        </optgroup>
+		<optgroup label="Bundesliga">
+          <option value="151 Bayern+Munich GER">FC Bayern München</option>
+          <option value="147 Borussia+Dortmund GER">Borussia Dortmund</option>
+          <option value="2005 RB+Leipzig GER">RB Leipzig</option>
+          <option value="145 Bayer+04+Leverkusen GER">	Bayer Leverkusen</option>
+          <option value="142 Schalke+04 GER">FC Schalke 04</option>
+          <option value="654 1899+Hoffenheim GER">1899 Hoffenheim</option>
+          <option value="157 Wolfsburg GER">VfL Wolfsburg</option>
+          <option value="149 Eintracht+Frankfurt GER">Eintracht Frankfurt</option>
+          <option value="653 Borussia+Monchengladbach GER">Mönchengladbach</option>
+          <option value="156 Werder+Bremen GER">Werder Bremen</option>
+          <option value="141 Stuttgart GER">VfB Stuttgart</option>
+          <option value="669 Freiburg GER">SC Freiburg</option>
+          <option value="150 Hertha+Berlin GER">Hertha BSC Berlin</option>
+          <option value="973 Fortuna+Dusseldorf GER">Fortuna Düsseldorf</option>
+          <option value="153 Hannover+96 GER">Hannover 96</option>
+		  <option value="660 Augsburg GER">FC Augsburg</option>
+          <option value="664 Mainz+05 GER">FSV Mainz 05</option>
+          <option value="143 Nurnberg GER">1. FC Nürnberg</option>
+        </optgroup>
+        <optgroup>
+          <option value="0 0">None</option>
+        </optgroup>
+      </select>
+      <br>
+      
+      
+           
+      </div>
+	  </div>
+	  
+	  
+	  <div class="col-lg-6 col-sm-6">            
+       <div id="forms">         
+      <label for="select">TEAM #2</label>
+      <select id="select_team_2">
+        <option value="0 0">Choose...</option>
+        <optgroup label="Serie A">
+          <option value="1593 Juventus">Juventus Torino</option>
+          <option value="1531 Napoli">SSC Napoli</option>
+          <option value="1591 Inter">Inter Milan</option>
+          <option value="1599 Atalanta">Atalanta Bergamo</option>
+          <option value="1597 Roma">AS Roma</option>
+          <option value="1566 Lazio">Lazio Roma</option>
+          <option value="1590 Milan">AC Milan</option>
+          <option value="1588 Fiorentina">AC Fiorentina</option>
+          <option value="1595 Torino">Torino AC</option>
+          <option value="1110 Sampdoria">Sampdoria Genoa</option>
+          <option value="1592 Udinese">Udinese Calcio</option>
+          <option value="2924 SPAL">Spal Ferrara 1907</option>
+          <option value="1527 Genoa">Genoa FC</option>
+          <option value="1602 Cagliari">Cagliari Calcio</option>
+          <option value="2462 Sassuolo">US Sassuolo Calcio</option>
+		  <option value="1586 Parma">FC Parma</option>
+          <option value="1538 Chievo">Chievo Verona</option>
+          <option value="1589 Empoli">Empoli FC</option>
+          <option value="1540 Frosinone">Frosinone Calcio</option>
+          <option value="1525 Bologna">Bologna FC</option>
+        </optgroup>
+		<optgroup label="Premier League">
+          <option value="220 Manchester+City">Manchester City</option>
+          <option value="204 Liverpool">Liverpool FC</option>
+          <option value="218 Tottenham+Hotspur">Tottenham Hotspur</option>
+          <option value="207 Chelsea">Chelsea FC</option>
+          <option value="213 Manchester+United">Manchester United</option>
+          <option value="201 Arsenal">Arsenal FC</option>
+          <option value="211 Everton">Everton FC</option>
+          <option value="235 Leicester+City">Leicester City</option>
+          <option value="206 Newcastle+United">Newcastle United</option>
+          <option value="241 Southampton">Southampton FC</option>
+          <option value="242 Crystal+Palace">Crystal Palace</option>
+          <option value="244 Watford">Watford FC</option>
+          <option value="225 Burnley">Burnley FC</option>
+          <option value="839 Brighton+%26+Hove+Albion">Brighton & Hove Albion</option>
+          <option value="243 Wolverhampton+Wanderers">Wolverhampton Wanderers</option>
+		  <option value="202 Fulham">Fulham FC</option>
+          <option value="219 West+Ham+United">West Ham United</option>
+          <option value="849 Bournemouth">AFC Bournemouth</option>
+          <option value="227 Cardiff+City">Cardiff City</option>
+          <option value="842 Huddersfield+Town">Huddersfield Town</option>
+        </optgroup>
+		<optgroup label="La Liga">
+          <option value="1064 Barcelona">FC Barcelona</option>
+          <option value="1067 Real+Madrid">Real Madrid</option>
+          <option value="1068 Atletico+Madrid">Atletico Madrid</option>
+          <option value="1061 Sevilla">Sevilla FC</option>
+          <option value="1049 Real+Sociedad">Real Sociedad</option>
+          <option value="1073 Valencia">FC Valencia</option>
+          <option value="1074 Villarreal">Villarreal CF</option>
+          <option value="1072 Betis">Betis Sevilla</option>
+          <option value="1055 Athletic+Bilbao">Athletic Bilbao</option>
+          <option value="1039 Celta+de+Vigo">Celta de Vigo</option>
+          <option value="1059 Espanyol">Espanyol Barcelona</option>
+          <option value="1062 Getafe">Getafe CF</option>
+          <option value="1048 Eibar">SD Eibar</option>
+          <option value="2337 Girona">Girona FC</option>
+          <option value="2298 Leganes">CD Leganes</option>
+		  <option value="1066 Levante">UD Levante Valencia</option>
+          <option value="2111 Alaves">CD Alaves</option>
+          <option value="1060 Valladolid">Real Valladolid</option>
+          <option value="2303 Rayo+Vallecano">Rayo Vallecano</option>
+          <option value="2319 Huesca">SD Huesca</option>
+        </optgroup>
+		<optgroup label="Bundesliga">
+          <option value="151 Bayern+Munich">FC Bayern München</option>
+          <option value="147 Borussia+Dortmund">Borussia Dortmund</option>
+          <option value="2005 RB+Leipzig">RB Leipzig</option>
+          <option value="145 Bayer+04+Leverkusen">	Bayer Leverkusen</option>
+          <option value="142 Schalke+04">FC Schalke 04</option>
+          <option value="654 1899+Hoffenheim">1899 Hoffenheim</option>
+          <option value="157 Wolfsburg">VfL Wolfsburg</option>
+          <option value="149 Eintracht+Frankfurt">Eintracht Frankfurt</option>
+          <option value="653 Borussia+Monchengladbach">Mönchengladbach</option>
+          <option value="156 Werder+Bremen">Werder Bremen</option>
+          <option value="141 Stuttgart">VfB Stuttgart</option>
+          <option value="669 Freiburg">SC Freiburg</option>
+          <option value="150 Hertha+Berlin">Hertha BSC Berlin</option>
+          <option value="973 Fortuna+Dusseldorf">Fortuna Düsseldorf</option>
+          <option value="153 Hannover+96">Hannover 96</option>
+		  <option value="660 Augsburg">FC Augsburg</option>
+          <option value="664 Mainz+05">FSV Mainz 05</option>
+          <option value="143 Nurnberg">1. FC Nürnberg</option>
+        </optgroup>
+        <optgroup>
+          <option value="0 0">None</option>
+        </optgroup>
+      </select>
+      
+      
+           
+      </div>
+	  </div>
+	  </div>
+	  <br>
+	  
+	  
+    <div class="row"> 
+	<div class="col-xl-offset-4 col-xl-4 col-lg-offset-4 col-lg-4 col-sm-offset-4 col-sm-4"></div>
+	<div class="col-lg-1 col-sm-1">
+	<button class="btn-default" onclick="create_1()">Soccer ratings</button></div>
+
+	
+	<div class="col-lg-1 col-sm-1">
+	<button class="btn-default" onclick="create_3()">Italy Nababet</button></div>
+	<div class="col-lg-1 col-sm-1">
+	<button class="btn-default" onclick="create_4()">Italy I&S</button></div>
+
+	
+	<div class="col-lg-1 col-sm-1">
+	<button class="btn-default" onclick="create_3s()">Spain Nababet</button></div>
+	</div>
+	<br>
+	<div class="row">
+	<div class="col-xl-offset-4 col-xl-4 col-lg-offset-4 col-lg-4 col-sm-offset-4 col-sm-4"></div>
+	
+	<div class="col-lg-1 col-sm-1">
+	<button class="btn-primary" onclick="create_marathon()">Marathon odds</button></div>
+    <script>
+        
+        function create_1(){
+			var team_1_all = document.getElementById("select_team_1").value;
+            var array_1 = team_1_all.split(" ");
+            var team_1_rating = array_1[0];
+			var team_1_odds = array_1[1];
+            var team_2_all = document.getElementById("select_team_2").value;
+            var array_2 = team_2_all.split(" ");
+            var team_2_rating = array_2[0];
+			var team_2_odds = array_2[1];
+            var link = "http://www.soccer-rating.com/calculator.php?team1=" + team_1_rating + "&team2=" + team_2_rating;
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/Italy/Serie+A/" + team_1_odds + "+vs+" + team_2_odds;
+			var link_nababet = "http://nababet.com/league.php?Country=Italy&League=Serie%20A&home=" + team_1_odds + "&away=" + team_2_odds;
+			window.open(encodeURI(link));
+            
+        }
+        function create_marathon(){
+			var team_1_all = document.getElementById("select_team_1").value;
+            var array_1 = team_1_all.split(" ");
+            var team_1_rating = array_1[0];
+			var team_1_odds = array_1[1];
+            var team_2_all = document.getElementById("select_team_2").value;
+            var array_2 = team_2_all.split(" ");
+            var team_2_rating = array_2[0];
+			var team_2_odds = array_2[1];
+			var league = array_1[2];
+			if(league == "ITA"){
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/Italy/Serie+A/" + team_1_odds + "+vs+" + team_2_odds;
+			window.open(encodeURI(link_marathon));}
+			else if(league == "SPA") {
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/Spain/Primera+Division/" + team_1_odds + "+vs+" + team_2_odds;
+			window.open(encodeURI(link_marathon));}
+			
+			else if(league == "GER") {
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/Germany/Bundesliga/" + team_1_odds + "+vs+" + team_2_odds;
+			window.open(encodeURI(link_marathon));}
+			
+			else if(league == "ENG") {
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/England/Premier+League/" + team_1_odds + "+vs+" + team_2_odds;
+			window.open(encodeURI(link_marathon));}
+			}
+
+            
+        function create_3(){
+			var team_1_all = document.getElementById("select_team_1").value;
+            var array_1 = team_1_all.split(" ");
+            var team_1_rating = array_1[0];
+			var team_1_odds = array_1[1];
+            var team_2_all = document.getElementById("select_team_2").value;
+            var array_2 = team_2_all.split(" ");
+            var team_2_rating = array_2[0];
+			var team_2_odds = array_2[1];
+            var link = "http://www.soccer-rating.com/calculator.php?team1=" + team_1_rating + "&team2=" + team_2_rating;
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/Italy/Serie+A/" + team_1_odds + "+vs+" + team_2_odds;
+			var link_nababet = "http://nababet.com/league.php?Country=Italy&League=Serie%20A&home=" + team_1_odds + "&away=" + team_2_odds;
+			window.open((link_nababet));
+			}
+        function create_4(){
+			window.open("https://injuriesandsuspensions.com/tag/italy-injuries-suspensions/");
+			}
+			
+			function create_1s(){
+			var team_1_all = document.getElementById("select_team_1").value;
+            var array_1 = team_1_all.split(" ");
+            var team_1_rating = array_1[0];
+			var team_1_odds = array_1[1];
+            var team_2_all = document.getElementById("select_team_2").value;
+            var array_2 = team_2_all.split(" ");
+            var team_2_rating = array_2[0];
+			var team_2_odds = array_2[1];
+            var link = "http://www.soccer-rating.com/calculator.php?team1=" + team_1_rating + "&team2=" + team_2_rating;
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/Spain/Primera+Division/" + team_1_odds + "+vs+" + team_2_odds;
+			var link_nababet = "http://nababet.com/league.php?Country=Italy&League=Serie%20A&home=" + team_1_odds + "&away=" + team_2_odds;
+			document.getElementById("result").innerHTML = link;
+			window.open(encodeURI(link));
+			}
+        
+
+            
+        function create_3s(){
+			var team_1_all = document.getElementById("select_team_1").value;
+            var array_1 = team_1_all.split(" ");
+            var team_1_rating = array_1[0];
+			var team_1_odds = array_1[1];
+            var team_2_all = document.getElementById("select_team_2").value;
+            var array_2 = team_2_all.split(" ");
+            var team_2_rating = array_2[0];
+			var team_2_odds = array_2[1];
+            var link = "http://www.soccer-rating.com/calculator.php?team1=" + team_1_rating + "&team2=" + team_2_rating;
+			var link_marathon = "https://www.marathonbet.co.uk/en/betting/Football/Italy/Serie+A/" + team_1_odds + "+vs+" + team_2_odds;
+			var link_nababet = "https://injuriesandsuspensions.com/tag/spain-injuries-suspensions/";
+			window.open((link_nababet));
+			}
+		
+			
+
+        
+        
+		
+            
+            
+            
+        
+    </script>
+    </body>
+</html>
